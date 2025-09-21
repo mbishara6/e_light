@@ -141,14 +141,10 @@ class _SplashScreenState extends State<SplashScreen>
                                 ),
                               ],
                             ),
-                             child: ClipRRect(
-                               borderRadius: BorderRadius.circular(30),
-                               child: Image.asset(
-                                 'assets/images/elight.jpg',
-                                 width: 80,
-                                 height: 80,
-                                 fit: BoxFit.cover,
-                               ),
+                             child: const Icon(
+                               Icons.account_balance_wallet,
+                               size: 60,
+                               color: Colors.blue,
                              ),
                           ),
                         ),
