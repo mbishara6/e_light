@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
+import '../models/prediction_model.dart';
 import '../providers/prediction_provider.dart';
 import '../models/crypto_models.dart';
 import '../widgets/crypto_card.dart';
@@ -15,6 +16,22 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // Helper to convert PredictionResult to PredictionModel for display
+  PredictionModel _convertToPredictionModel(PredictionResult result) {
+    // Dummy conversion: fill with placeholder values for missing fields
+    return PredictionModel(
+      id: 0,
+      user: '0x0000000000000000000000000000000000000000',
+      token: '0x0000000000000000000000000000000000000000',
+      currentPrice: BigInt.from(result.currentPrice),
+      predictedPrice: BigInt.from(result.predictedPrice),
+      timestamp: DateTime.now(),
+      expiryTime: DateTime.now().add(const Duration(hours: 1)),
+      stakeAmount: BigInt.from(0),
+      isResolved: false,
+      isCorrect: false,
+    );
+  }
   CryptoData? selectedCrypto;
   
   Duration selectedTimeframe = const Duration(hours: 24);
@@ -137,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     
                     // Prediction Result
                     if (provider.currentPrediction != null)
-                      PredictionCard(prediction: provider.currentPrediction!),
+                      PredictionCard(prediction: _convertToPredictionModel(provider.currentPrediction!)),
                       
                     if (provider.isPredicting)
                       Card(
