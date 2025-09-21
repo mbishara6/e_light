@@ -26,7 +26,7 @@ class _WalletScreenState extends State<WalletScreen>
   final List<WalletCard> _cards = [
     WalletCard(
       id: '1',
-      name: 'John Doe',
+      name: 'Elight User',
       number: '1234567890123456',
       expiryDate: '12/26',
       cvv: '123',
@@ -37,7 +37,7 @@ class _WalletScreenState extends State<WalletScreen>
     ),
     WalletCard(
       id: '2',
-      name: 'John Doe',
+      name: 'Elight User',
       number: '9876543210987654',
       expiryDate: '08/25',
       cvv: '456',
@@ -48,7 +48,7 @@ class _WalletScreenState extends State<WalletScreen>
     ),
     WalletCard(
       id: '3',
-      name: 'John Doe',
+      name: 'Elight User',
       number: '5555444433332222',
       expiryDate: '03/27',
       cvv: '789',
@@ -181,21 +181,24 @@ class _WalletScreenState extends State<WalletScreen>
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
-        child: Column(
-          children: [
-            // Header
-            _buildHeader(),
-            // Balance and Quick Actions
-            _buildBalanceSection(),
-            // Cards Section
-            _buildCardsSection(),
-            // Tab Section
-            _buildTabSection(),
-            // Content based on selected tab
-            Expanded(
-              child: _buildTabContent(),
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              // Header
+              _buildHeader(),
+              // Balance and Quick Actions
+              _buildBalanceSection(),
+              // Cards Section
+              _buildCardsSection(),
+              // Tab Section
+              _buildTabSection(),
+              // Content based on selected tab
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.5,
+                child: _buildTabContent(),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -219,7 +222,7 @@ class _WalletScreenState extends State<WalletScreen>
               ),
               SizedBox(height: 4),
               Text(
-                'John Doe',
+                'Elight User',
                 style: TextStyle(
                   color: AppColors.onSurface,
                   fontSize: 24,
@@ -306,7 +309,7 @@ class _WalletScreenState extends State<WalletScreen>
                   });
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(4),
                   decoration: BoxDecoration(
                     color: Colors.white.withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(12),
