@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import '../services/blockchain_services.dart';
 import '../models/prediction_model.dart';
-import '../config/network_config.dart';
+
 
 class Web3Provider extends ChangeNotifier {
   final BlockchainService _blockchainService = BlockchainService();
