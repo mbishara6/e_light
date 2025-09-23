@@ -6,6 +6,7 @@ import 'providers/prediction_provider.dart';
 import 'screens/wallet_connect_screen.dart';
 import 'screens/dashboard_screen.dart';
 import 'screens/splash_screen.dart';
+import 'screens/main_navigation_screen.dart';
 
 void main() {
   runApp(const ELightApp());
@@ -76,6 +77,7 @@ class ELightApp extends StatelessWidget {
         routes: {
           '/connect': (context) => const WalletConnectScreen(),
           '/dashboard': (context) => const DashboardScreen(),
+          '/navigation': (context) => const MainNavigationScreen(),
         },
       ),
     );

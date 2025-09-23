@@ -224,7 +224,7 @@ class _WalletConnectScreenState extends State<WalletConnectScreen> {
 
     if (success) {
       if (mounted) {
-        Navigator.pushReplacementNamed(context, '/dashboard');
+        Navigator.pushReplacementNamed(context, '/navigation');
       }
     } else {
       _showErrorSnackBar('Failed to connect wallet. Please check your private key.');
