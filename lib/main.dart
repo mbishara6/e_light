@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'providers/web3_provider.dart';
+import 'providers/prediction_provider.dart';
 import 'screens/wallet_connect_screen.dart';
 import 'screens/dashboard_screen.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
   runApp(const ELightApp());
@@ -17,6 +19,7 @@ class ELightApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => Web3Provider()),
+        ChangeNotifierProvider(create: (_) => PredictionProvider()),
       ],
       child: MaterialApp(
         title: 'E-Light Crypto Predictions',
@@ -69,7 +72,7 @@ class ELightApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
         ),
         themeMode: ThemeMode.system,
-        home: const AppWrapper(),
+        home: const SplashScreen(),
         routes: {
           '/connect': (context) => const WalletConnectScreen(),
           '/dashboard': (context) => const DashboardScreen(),

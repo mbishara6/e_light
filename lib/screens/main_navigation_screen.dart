@@ -3,6 +3,9 @@ import 'package:flutter_animate/flutter_animate.dart';
 import '../utils/app_colors.dart';
 import 'wallet_screen.dart';
 import 'home_screen.dart';
+import 'dashboard_screen.dart';
+import 'create_prediction_screen.dart';
+import 'wallet_connect_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -22,7 +25,9 @@ class _MainNavigationScreenState extends State<MainNavigationScreen>
   final List<Widget> _screens = [
     const HomeScreen(),
     const WalletScreen(),
-    
+    const DashboardScreen(),
+    const CreatePredictionScreen(),
+    const WalletConnectScreen(),
   ];
 
   final List<NavigationItem> _navItems = [
@@ -35,6 +40,21 @@ class _MainNavigationScreenState extends State<MainNavigationScreen>
       icon: Icons.account_balance_wallet_outlined,
       activeIcon: Icons.account_balance_wallet,
       label: 'Wallet',
+    ),
+    NavigationItem(
+      icon: Icons.dashboard_outlined,
+      activeIcon: Icons.dashboard,
+      label: 'Dashboard',
+    ),
+    NavigationItem(
+      icon: Icons.add_circle_outline,
+      activeIcon: Icons.add_circle,
+      label: 'Predict',
+    ),
+    NavigationItem(
+      icon: Icons.link_outlined,
+      activeIcon: Icons.link,
+      label: 'Connect',
     ),
   ];
 
