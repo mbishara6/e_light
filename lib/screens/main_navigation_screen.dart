@@ -4,7 +4,6 @@ import '../utils/app_colors.dart';
 import 'wallet_screen.dart';
 import 'home_screen.dart';
 import 'dashboard_screen.dart';
-import 'create_prediction_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -25,7 +24,6 @@ class _MainNavigationScreenState extends State<MainNavigationScreen>
     const HomeScreen(),
     const WalletScreen(),
     const DashboardScreen(),
-    const CreatePredictionScreen(),
   ];
 
   final List<NavigationItem> _navItems = [
@@ -43,11 +41,6 @@ class _MainNavigationScreenState extends State<MainNavigationScreen>
       icon: Icons.dashboard_outlined,
       activeIcon: Icons.dashboard,
       label: 'Dashboard',
-    ),
-    NavigationItem(
-      icon: Icons.add_circle_outline,
-      activeIcon: Icons.add_circle,
-      label: 'Predict',
     ),
   ];
 
