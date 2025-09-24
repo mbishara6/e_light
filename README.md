@@ -1,6 +1,6 @@
 # E-Light 💎
 
-**E-Light** is a modern Flutter cryptocurrency wallet and prediction platform that combines traditional wallet functionality with AI-powered market analysis and Web3 blockchain integration. Experience the future of crypto management with beautiful animations and intelligent insights.
+**E-Light** is a modern **Flutter-powered** cryptocurrency wallet and prediction platform that combines traditional wallet functionality with AI-powered market analysis and Web3 blockchain integration. Built entirely with Flutter framework, it delivers beautiful animations and intelligent insights across all platforms.
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
@@ -9,7 +9,22 @@
 
 ## 🎯 What is E-Light?
 
-E-Light is a comprehensive crypto application that bridges traditional finance with decentralized blockchain technology. It offers three main experiences:
+E-Light is a comprehensive crypto application built with **Flutter**, Google's UI toolkit, that bridges traditional finance with decentralized blockchain technology. Leveraging Flutter's cross-platform capabilities, it delivers native performance across Windows, Android, iOS, and Web with a single codebase.
+
+## 🛠️ **Built with Flutter**
+
+E-Light showcases the power of Flutter development with:
+
+- **Single Codebase**: One Flutter app running on 4+ platforms
+- **Native Performance**: Compiled to native code for optimal speed
+- **Beautiful Animations**: Flutter's animation framework for smooth UX
+- **Material Design 3**: Google's latest design system implementation
+- **Hot Reload**: Fast development and testing cycle
+- **Rich Ecosystem**: Leveraging Flutter packages for Web3, charts, fonts
+
+## 💎 **App Features**
+
+It offers three main experiences:
 
 ### 🏠 **AI Crypto Predictions**
 - **Market Intelligence**: AI-powered crypto price predictions for BTC, ETH, ADA, SOL
@@ -33,17 +48,17 @@ E-Light is a comprehensive crypto application that bridges traditional finance w
 - **Reward System**: Earn rewards for accurate predictions
 - **Win/Loss Tracking**: Monitor prediction performance and statistics
 
-## ✨ **Key Features**
+## ✨ **Flutter-Powered Features**
 
-- **🎭 Animated Splash Screen**: Beautiful particle animation intro
-- **🔐 Secure Wallet Connection**: Private key-based BlockDAG connection
-- **🎨 Modern UI**: Material Design 3 with custom animations
-- **📱 Cross-Platform**: Works on Windows, Android, iOS, Web
-- **⚡ Real-Time Updates**: Live price data and balance updates
-- **🎯 Interactive Charts**: FL Chart integration for price visualization
-- **💳 Card Management**: Animated wallet cards with balance tracking
-- **📊 Transaction History**: Categorized transaction management
-- **🚀 Smooth Navigation**: Animated bottom navigation with 3 tabs
+- **🎭 Flutter Animations**: Custom particle animations built with Flutter's animation framework
+- **🔐 Secure Connection**: Private key-based BlockDAG connection with Flutter crypto libraries
+- **🎨 Material Design 3**: Google's latest design system implemented in Flutter
+- **📱 True Cross-Platform**: Single Flutter codebase running on Windows, Android, iOS, Web
+- **⚡ Real-Time State**: Provider pattern for reactive UI updates
+- **📊 FL Chart Integration**: Beautiful charts using Flutter's fl_chart package
+- **💳 Animated Cards**: Custom Flutter widgets with gradient animations
+- **🧩 Provider State Management**: Efficient state management with Flutter Provider
+- **🚀 Smooth Navigation**: Custom Flutter navigation with animated transitions
 
 ## 📱 App Flow
 
