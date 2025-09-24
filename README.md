@@ -7,6 +7,29 @@
 ![Web3](https://img.shields.io/badge/Web3-F16822?style=for-the-badge&logo=web3.js&logoColor=white)
 ![BlockDAG](https://img.shields.io/badge/BlockDAG-6C5CE7?style=for-the-badge&logoColor=white)
 
+## 🔑 **Quick Start - Login Instructions**
+
+### **⚡ First Thing To Do: Login to E-Light**
+
+1. **Launch the App**: Run `flutter run` or open the deployed app
+2. **Watch Splash Screen**: Enjoy the animated intro (3 seconds)
+3. **Wallet Connect Screen**: You'll see the BlockDAG connection interface
+4. **Enter Private Key**: Copy and paste this test private key:
+
+   ```
+   0x59F405F283528fbdd95028A038c36724016032f9
+   ```
+
+5. **Click "Connect Wallet"**: The app will connect to BlockDAG testnet
+6. **Access Main App**: You'll be taken to the 3-tab navigation
+
+> **⚠️ Important**: This is a **test private key** for demo purposes only. Never use real private keys in production or share them publicly.
+
+### **🎯 After Login You Can:**
+- 🏠 **Home Tab**: Generate AI crypto predictions
+- 💼 **Wallet Tab**: Manage digital wallet cards and crypto assets  
+- 📊 **Dashboard Tab**: Create Web3 predictions and stake BDAG tokens
+
 ## 🎯 What is E-Light?
 
 E-Light is a comprehensive crypto application built with **Flutter**, Google's UI toolkit, that bridges traditional finance with decentralized blockchain technology. Leveraging Flutter's cross-platform capabilities, it delivers native performance across Windows, Android, iOS, and Web with a single codebase.
@@ -72,8 +95,10 @@ It offers three main experiences:
 ## 📱 How to Use E-Light
 
 ### **Step 1: Launch & Connect**
+> **🔑 Quick Login**: Use the test private key provided in the [Login Instructions](#-quick-start---login-instructions) section above.
+
 1. **Splash Screen**: Enjoy the animated intro with particles and wallet logo
-2. **Wallet Connect**: Enter your BlockDAG private key to connect to testnet
+2. **Wallet Connect**: Enter the test private key: `0x59F405F283528fbdd95028A038c36724016032f9`
 3. **Navigation**: Access the main app with 3-tab bottom navigation
 
 ### **Step 2: Explore Features**
