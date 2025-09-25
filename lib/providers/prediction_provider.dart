@@ -24,17 +24,17 @@ class PredictionProvider extends ChangeNotifier {
       // Simulate API call delay
       await Future.delayed(const Duration(seconds: 2));
       
-      // Sample crypto data with price history
+      // Sample crypto data with price history - Focus on BlockDAG and ETH
       _cryptos = [
         CryptoData(
-          symbol: 'BTC',
-          name: 'Bitcoin',
-          currentPrice: 45000.00,
-          changePercent24h: 2.45,
-          marketCap: 850000000000,
-          volume24h: 25000000000,
+          symbol: 'BDAG',
+          name: 'BlockDAG', // Next-gen DAG blockchain with 10,000+ TPS
+          currentPrice: 0.0234, // Presale price - massive growth potential
+          changePercent24h: 8.45, // Strong upward momentum
+          marketCap: 5000000000, // Projected multi-billion dollar valuation
+          volume24h: 500000000, // Growing institutional interest
           iconUrl: '',
-          priceHistory: _generatePriceHistory(45000, 30),
+          priceHistory: _generatePriceHistory(0.0234, 30),
         ),
         CryptoData(
           symbol: 'ETH',
@@ -45,26 +45,6 @@ class PredictionProvider extends ChangeNotifier {
           volume24h: 15000000000,
           iconUrl: '',
           priceHistory: _generatePriceHistory(3200, 30),
-        ),
-        CryptoData(
-          symbol: 'ADA',
-          name: 'Cardano',
-          currentPrice: 1.25,
-          changePercent24h: 5.67,
-          marketCap: 40000000000,
-          volume24h: 2000000000,
-          iconUrl: '',
-          priceHistory: _generatePriceHistory(1.25, 30),
-        ),
-        CryptoData(
-          symbol: 'SOL',
-          name: 'Solana',
-          currentPrice: 95.50,
-          changePercent24h: -3.21,
-          marketCap: 45000000000,
-          volume24h: 3500000000,
-          iconUrl: '',
-          priceHistory: _generatePriceHistory(95.50, 30),
         ),
       ];
       

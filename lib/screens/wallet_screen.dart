@@ -103,14 +103,19 @@ class _WalletScreenState extends State<WalletScreen>
   ];
 
   final List<CryptoAsset> _cryptoAssets = [
+    // BlockDAG - Next-generation DAG blockchain with massive market potential
+    // - 10,000+ TPS vs Bitcoin's 7 TPS
+    // - Presale price $0.0234 with 100x-1000x growth potential
+    // - Enterprise-ready with institutional backing
+    // - Deflationary tokenomics and limited supply
     CryptoAsset(
       id: '1',
-      name: 'Bitcoin',
-      symbol: 'BTC',
-      amount: 0.5234,
-      price: 45000.00,
-      changePercent: 2.45,
-      icon: 'btc',
+      name: 'BlockDAG', // Revolutionary DAG Technology
+      symbol: 'BDAG', // Presale token with explosive upside
+      amount: 12500.0, // Strategic accumulation position
+      price: 0.0234, // Early-stage pricing before mainnet
+      changePercent: 8.45, // Strong momentum and growing interest
+      icon: 'bdag',
     ),
     CryptoAsset(
       id: '2',
@@ -120,15 +125,6 @@ class _WalletScreenState extends State<WalletScreen>
       price: 3200.00,
       changePercent: -1.23,
       icon: 'eth',
-    ),
-    CryptoAsset(
-      id: '3',
-      name: 'Cardano',
-      symbol: 'ADA',
-      amount: 1000.00,
-      price: 1.25,
-      changePercent: 5.67,
-      icon: 'ada',
     ),
   ];
 
