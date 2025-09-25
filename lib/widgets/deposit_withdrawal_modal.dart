@@ -70,15 +70,16 @@ class _DepositWithdrawalModalState extends State<DepositWithdrawalModal>
 
   void _submitTransaction() async {
     if (_formKey.currentState!.validate() && _selectedCardId != null) {
+      if (!mounted) return;
+      
       setState(() {
         _isProcessing = true;
       });
 
-  // ignore: use_build_context_synchronously
-  final localContext = context; // Capture context before async gap
-
       // Simulate processing delay for better UX
       await Future.delayed(const Duration(milliseconds: 1500));
+
+      if (!mounted) return; // Check mounted state after async operation
 
       final amount = double.parse(_amountController.text);
       final description = _descriptionController.text.isEmpty
@@ -89,23 +90,25 @@ class _DepositWithdrawalModalState extends State<DepositWithdrawalModal>
 
       if (mounted) {
         await _animationController.reverse();
-        Navigator.of(localContext).pop();
+        if (mounted) {
+          Navigator.of(context).pop();
 
-        // Show success snackbar
-        ScaffoldMessenger.of(localContext).showSnackBar(
-          SnackBar(
-            content: Text(
-              widget.isDeposit 
-                  ? 'Deposit successful! \$${amount.toStringAsFixed(2)} added to your wallet.'
-                  : 'Withdrawal successful! \$${amount.toStringAsFixed(2)} withdrawn from your wallet.',
+          // Show success snackbar
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                widget.isDeposit 
+                    ? 'Deposit successful! \$${amount.toStringAsFixed(2)} added to your wallet.'
+                    : 'Withdrawal successful! \$${amount.toStringAsFixed(2)} withdrawn from your wallet.',
+              ),
+              backgroundColor: Colors.green,
+              behavior: SnackBarBehavior.floating,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
             ),
-            backgroundColor: Colors.green,
-            behavior: SnackBarBehavior.floating,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
-        );
+          );
+        }
       }
     }
   }

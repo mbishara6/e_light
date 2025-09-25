@@ -1,6 +1,4 @@
-// Make sure you have added web3dart and http to your pubspec.yaml
-import 'package:web3dart/web3dart.dart';
-import 'package:http/http.dart';
+// Crypto Predictor Wallet Service - Contract configuration
 
 class CryptoPredictorWalletService {
   // Set your actual RPC URL and contract address below

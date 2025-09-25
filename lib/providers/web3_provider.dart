@@ -104,7 +104,7 @@ class Web3Provider extends ChangeNotifier {
   stakeAmount: stakeAmountWei,
       );
 
-      final txHash = await _blockchainService.createPrediction(request);
+      await _blockchainService.createPrediction(request);
 
       // Refresh user data after successful transaction
       await Future.delayed(const Duration(seconds: 3)); // Wait for transaction to be mined
